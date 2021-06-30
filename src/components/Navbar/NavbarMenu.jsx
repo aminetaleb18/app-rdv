@@ -16,7 +16,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 <Router>
 		<nav className={isOpen}>
 	
-			<ul>
+			<ul className="ul">
                 <li><Link to='/Home'>Home</Link></li>
             </ul>
             <ul>
@@ -39,4 +39,4 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 	)
 }
 
-export default Navbar
+export default NavbarMenu

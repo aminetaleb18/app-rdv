@@ -1,6 +1,8 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar'
+import NavbarMenu from './components/Navbar/NavbarMenu'
 import { useState} from 'react'
+import Navbar from 'react-bootstrap/Navbar'
+
 
 function App() {
 
@@ -14,15 +16,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-          <section className="flex">
-					  <button text="OUVRIR MENU" onClick={openMenu}/>
-				  </section>
-        <main>
+        <Navbar expand="lg" variant="light" bg="dark"
+         isOpen={isOpen} setIsOpen={setIsOpen} />
+        <section className="flex">
+					<button text="OUVRIR MENU" onClick={openMenu}/>
+				</section>
+
+
         
         
         
-        </main>
+        
+        
       </header>
     </div>
   );
