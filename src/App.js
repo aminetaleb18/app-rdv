@@ -2,10 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Link, Route , Switch } from 'react-router-dom';
 import Login from './components/Login'
 import Register from './components/Register'
-import Home from './components/Home'
+import Home from './components/Home/Home'
 import NavbarMenu from './components/Navbar/NavbarMenu'
 import { useState} from 'react'
 import Navbar from 'react-bootstrap/Navbar'
+
 
 
 function App() {
@@ -29,7 +30,9 @@ function App() {
           
         </header>
         <Switch>
-            <Route path='/Home' component={() => <Home/>}/>
+        <Route path='/Home' exact>
+					<Home />
+				</Route>
             <Route path='/Connexion' component={() => <Login/>}/>
             <Route path='/Inscription' component={() => <Register/>}/>
         </Switch>
